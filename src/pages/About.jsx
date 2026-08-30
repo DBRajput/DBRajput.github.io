@@ -5,7 +5,7 @@ export default function About() {
   usePageMeta({
     title: 'About',
     description:
-      'Background, experience, education, research, skills and certifications of Digvijaysing Rajput - M.Tech CS at IIT Hyderabad, former AI Research Intern at Samsung SRIB.',
+      'Background, experience, education, M.Tech thesis, research, skills and certifications of Digvijaysing Rajput - M.Tech CS at IIT Hyderabad, former AI Research Intern at Samsung SRIB.',
     path: '/about',
   });
 
@@ -16,7 +16,7 @@ export default function About() {
           <Reveal className="section-header">
             <p className="section-label">About</p>
             <h1>
-              Background &amp; <span className="serif">Experience</span>
+              Experience &amp; <span className="serif">Skills</span>
             </h1>
             <p>
               I&rsquo;m doing my M.Tech in Computer Science at IIT Hyderabad, where I also work as a
@@ -100,6 +100,26 @@ export default function About() {
                   </div>
                 </div>
               </div>
+
+              <h2 className="col-label" style={{ marginTop: '2.75rem' }}>Skills</h2>
+              <p className="subhead">Machine Learning &amp; AI</p>
+              <div className="skills-grid" style={{ marginBottom: '1.5rem' }}>
+                {['LLM / VLM Fine-Tuning', 'RAG', 'Transformers', 'LoRA', 'Deep RL'].map((s) => (
+                  <span className="skill-pill" key={s}>{s}</span>
+                ))}
+              </div>
+              <p className="subhead">Languages &amp; Web</p>
+              <div className="skills-grid" style={{ marginBottom: '1.5rem' }}>
+                {['Python', 'C++', 'SQL', 'React.js', 'Django', 'Node.js'].map((s) => (
+                  <span className="skill-pill" key={s}>{s}</span>
+                ))}
+              </div>
+              <p className="subhead">Tools</p>
+              <div className="skills-grid">
+                {['Git', 'Docker', 'Linux', 'Azure', 'CI/CD', 'Hugging Face'].map((s) => (
+                  <span className="skill-pill" key={s}>{s}</span>
+                ))}
+              </div>
             </Reveal>
           </div>
         </div>
@@ -108,9 +128,9 @@ export default function About() {
       <section>
         <div className="container">
           <Reveal className="section-header">
-            <p className="section-label">Research &amp; Skills</p>
+            <p className="section-label">Academic Work</p>
             <h2>
-              Academic Work &amp; <span className="serif">Technical Stack</span>
+              Research &amp; <span className="serif">Thesis</span>
             </h2>
           </Reveal>
           <div className="about-grid">
@@ -143,24 +163,25 @@ export default function About() {
             </Reveal>
 
             <Reveal>
-              <h3 className="col-label">Skills</h3>
-              <p className="subhead">Machine Learning &amp; AI</p>
-              <div className="skills-grid" style={{ marginBottom: '1.5rem' }}>
-                {['LLM / VLM Fine-Tuning', 'RAG', 'PyTorch', 'Transformers', 'LoRA', 'Deep RL', 'NLP'].map((s) => (
-                  <span className="skill-pill" key={s}>{s}</span>
-                ))}
-              </div>
-              <p className="subhead">Languages &amp; Web</p>
-              <div className="skills-grid" style={{ marginBottom: '1.5rem' }}>
-                {['Python', 'C++', 'SQL', 'React.js', 'Django', 'Node.js', 'Apex / LWC'].map((s) => (
-                  <span className="skill-pill" key={s}>{s}</span>
-                ))}
-              </div>
-              <p className="subhead">Tools</p>
-              <div className="skills-grid">
-                {['Git', 'Docker', 'Linux', 'Azure', 'CI/CD', 'Hugging Face'].map((s) => (
-                  <span className="skill-pill" key={s}>{s}</span>
-                ))}
+              <h3 className="col-label">M.Tech Thesis / Capstone</h3>
+              <div className="timeline">
+                <div className="timeline-item">
+                  <div className="timeline-item__date">2026</div>
+                  <div>
+                    <h3>Efficient &amp; Deployable LLM Agents</h3>
+                    <p className="timeline-item__org" style={{ marginBottom: '0.25rem' }}>
+                      From Web Automation to Real-World Customer Interaction
+                    </p>
+                    <p className="timeline-item__org">
+                      IIT Hyderabad · CSE · Guide: Dr. Vineeth N Balasubramanian
+                    </p>
+                    <ul>
+                      <li>Fine-tuned a 1.7B web agent with reinforcement learning until it beat a 32B model - 34.8% vs 16.9% success on WebArena-Lite.</li>
+                      <li>Cut what each agent step sends by ~60% using lossless image compression, with no loss in accuracy.</li>
+                      <li>Shipped LightSpeak AI: one grounded brain answering over voice, chat and email, replying in under a second.</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </Reveal>
           </div>
